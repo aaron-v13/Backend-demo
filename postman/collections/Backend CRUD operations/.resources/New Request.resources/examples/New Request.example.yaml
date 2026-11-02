@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: http://localhost:4000/api/v1/users/register
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"username\": \"aaron\",\r
+
+      \    \"email\": \"aaron@gmail.com\",\r
+
+      \    \"password\": \"password123\"\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    X-Powered-By: Express
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "116"
+    ETag: W/"74-fx2kWANCRL6cUysyx3+TAzDkmyo"
+    Date: Mon, 02 Nov 2026 17:37:57 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+  body:
+    type: json
+    content: |-
+      {
+        "message": "User registered!",
+        "user": {
+          "id": "6ae8ca7410e742e64ada8fa3",
+          "email": "aaron@gmail.com",
+          "username": "aaron"
+        }
+      }
+order: 1000
